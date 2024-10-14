@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/responsive.css" media="screen">
+    <link rel="icon" href="../img/logo_site.png">
+
+    <!-- JavaScript Abaixo -->
+    <script src="../js/general-dynamic.js" defer></script>
+    <script src="../js/senha.js" defer></script>
+
+    <!-- Fonte Abaixo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Icons Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Cidadania Digital</title>
+</head>
+
+<body class="senhas">
+<!-- Abaixo o Modo Escuro -->
+    <header id="header">
+        <div class="trilho" id="trilho">
+            <div class="indicador"></div>
+        </div>
+
+        <!-- Menu de navegação do site -->
+        <div class="interface">
+            <section class="logo">
+                <a href="https://colegioaplicacao.com.br/"><img class="logo-preta" src="../img/logo-preta.png"
+                        alt="Logo do Aplicação"></a>
+                <a href="https://colegioaplicacao.com.br/"><img class="logo-branca" src="../img/logo-branca.png"
+                        alt="Logo do Aplicação"></a>
+            </section>
+            <section class="menu-desktop">
+                <nav>
+                    <ul>
+                        <li><a href="../../index.html">Início</a></li>
+                        <li><a href="senhas.html">Senhas</a></li>
+                        <li><a href="alunos.html">Alunos</a></li>
+                        <li><a href="fontes.html">Fontes</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="saiba-mais">
+                <a href="https://www.serasaexperian.com.br/blog-pme/cidadania-digital/" target="_blank">
+                    <button>Saiba Mais</button>
+                </a>
+            </section>
+            <div class="menu-mob" id="menu-mob">
+                <div class="line-menumob-1"></div>
+                <div class="line-menumob-2"></div>
+            </div>
+            <section class="menu-mobile" id="menu-mobile">
+                <nav>
+                    <ul>
+                        <li><a href="../../index.html">Início</a></li>
+                        <li><a href="senhas.html">Senhas</a></li>
+                        <li><a href="alunos.html">Alunos</a></li>
+                        <li><a href="fontes.html">Fontes</a></li>
+                        <li><a href="https://www.serasaexperian.com.br/blog-pme/cidadania-digital/"
+                                target="_blank">Saiba Mais</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </header>
+
+<section class="codigo">
+    <!-- Parte da Verificação -->
+    <section class="verifica">
+        <div class="container">
+            <form id="passwordForm">
+                <h2>Verificador de Senhas Fortes</h2>
+                <label for="senha">Digite sua senha:</label>
+                <div class="senha-container">
+                    <input type="password" id="senha" name="senha">
+                    <div id="icon" onclick="showHide()"></div>
+                </div>
+            </form>
+            <div class="bar-strength">
+                <div id="strength-indicador" class="força-indicador"></div>
+            </div>
+            <p class="forca" id="strenght-text"></p>
+            <p class="msg" id="mensagem"></p>
+        </div>
+    </section>
+
+    <!-- Gerador de Senhas -->
+    <section class="gerador">
+        <div class="contain">
+            <div class="text">Gerador de Senhas Fortes</div>
+            <div class="input-data">
+                <div class="display">
+                    <input type="text" id="senha-display" readonly>
+                    <span class="far" id="copy-icon" onclick="copy()"><ion-icon name="copy-outline"></ion-icon></span>
+                    <span class="fas" id="copy-active" onclick="copy()" style="display: none;"><ion-icon
+                            name="copy"></ion-icon></span>
+                </div>
+                <button id="gerar-senha">Gerar Senha</button>
+            </div>
+        </div>
+
+        <script>
+            const display = document.getElementById("senha-display"),
+                button = document.getElementById("gerar-senha"),
+                copyBtn = document.getElementById("copy-icon"),
+                copyActive = document.getElementById("copy-active");
+        
+            let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            let specialChars = "@#$-_";
+        
+            button.onclick = () => {
+                let randomPassword = "";
+                copyActive.style.display = "none";
+                copyBtn.style.display = "block";
+        
+                randomPassword += chars.charAt(Math.floor(Math.random() * chars.length));
+                for (let i = 1; i < 11; i++) {
+                    randomPassword += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+        
+                let specialCharPosition = Math.floor(Math.random() * 10) + 1;
+                randomPassword = randomPassword.slice(0, specialCharPosition) + 
+                                specialChars.charAt(Math.floor(Math.random() * specialChars.length)) + 
+                                randomPassword.slice(specialCharPosition);
+        
+                display.value = randomPassword;
+            };
+        
+            function copy() {
+                display.select();
+                document.execCommand("copy");
+                copyBtn.style.display = "none";
+                copyActive.style.display = "block";
+            }
+        </script>        
+    </section>
+</section>
+
+    <!-- Página Inicial -->
+    <section class="paginaum">
+        <div class="interface">
+            <article class="icons-pagina">
+                <a href="../../index.html">
+                    <button><i class="bi bi-dash-square"></i>
+                        <p>Página Inicial</p>
+                    </button>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="interface">
+            <section class="top-footer">
+                <a href="https://www.instagram.com/colegioaplicacaoo/" target="_blank"><button><i
+                            class="bi bi-instagram"></i></button></a>
+                <a href="mailto:brunomenezes.21262@alu.colegioaplicacao.com.br"><button><i
+                            class="bi bi-envelope-paper"></i></button></a>
+                <a href="https://www.formula1.com/en/results/2024/team"><button><i
+                            class="bi bi-trophy"></i></button></a>
+            </section>
+            <section class="middle-footer">
+                <a href="mailto:brunomenezes.21262@alu.colegioaplicacao.com.br">Suporte</a>
+                <a href="https://github.com/brunohsmz" target="_blank">Informações</a>
+                <a href="https://github.com/brunohsmz?tab=repositories" target="_blank">Updates</a>
+            </section>
+            <section class="bottom-footer">
+                <p>KKOLDe &copy; Todos os direitos reservados à ninguém.</p>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

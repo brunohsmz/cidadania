@@ -1,0 +1,22 @@
+Considerações Finais:
+
++ Organização (oq faltou principalmente na parte do modo escuro e no style2.css)
+- Pesquisas de códigos
++ Estudos
+- Perca de tempo com coisas fúteis 
+
+como primeiro trabalho/segundo contato com html, diria que foi uma boa experiência/execução, claro,
+poderia ficar beeem melhor, mas como é algo inicial, :steamhappy:
+
+-kkolde, 12/10/2024 (00:19)
+    Go Fúria
+       "A FURIA conheceu nesta sexta-feira (11) o adversário da semifinal da IEM Rio 2024. 
+        A equipe brasileira vai enfrentar a MOUZ, que derrotou a Vitality por 2 a 1 com uma 
+        grande virada após perder o primeiro mapa."
+
+obs: por favor, nao me mande um arquivo em python enquanto eu faço um site em html, css e js, eu não
+faço a minima ideia de como fazer isso sem usar flask, e blablabla (PQ EU TENHO 0 EXP)
+
+-Finished:
+14/10/2024 (03:15 AM)
+Segunda-Feira - Dia 288 do ano de 2024
