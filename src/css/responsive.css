@@ -25,6 +25,7 @@
         display: block;
     }
 
+    body header .menu-mob,
     body.page2 header .menu-mob,
     body.aluno header .menu-mob,
     body.fontes header .menu-mob,
