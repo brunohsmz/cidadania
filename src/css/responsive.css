@@ -7,11 +7,7 @@
     header .saiba-mais {
         display: none;
     }
-
-    header.rolar .menu-mob {
-        display: block;
-    }
-
+    
     header .trilho {
         display: none;
     }
@@ -25,7 +21,7 @@
         display: block;
     }
 
-    body header .menu-mob,
+    header .menu-mob,
     body.page2 header .menu-mob,
     body.aluno header .menu-mob,
     body.fontes header .menu-mob,
