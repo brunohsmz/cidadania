@@ -21,11 +21,16 @@
         display: block;
     }
 
+    body.um header .menu-mob,
     body.page2 header .menu-mob,
     body.aluno header .menu-mob,
     body.fontes header .menu-mob,
     body.senhas header .menu-mob {
         display: block;
+    }
+
+    body.um header .menu-mob div{
+        background-color: white;
     }
 
     /* Fontes */
@@ -118,7 +123,31 @@
 }
 
 @media screen and (max-width: 650px) {
+    body.um header {
+        background-color: #2c2b2b;
+        padding: 20px;
+        box-shadow: 0 0 8px #00000061;
+    }
 
+    body.um header .menu-desktop nav ul li a {
+        color: black;
+    }
+
+    body.um header .saiba-mais button {
+        border: 1px solid black;
+        color: black;
+    }
+
+    body.um header .logo .logo-branca {
+        display: block;
+    }
+
+    body.um header .logo .logo-preta {
+        display: none;
+    }
+
+    /* ------------------------------------------------------------------- */
+    
     /* Responsivo Logo */
     header .logo img {
         max-width: 270px;
