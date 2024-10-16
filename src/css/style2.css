@@ -553,6 +553,9 @@ body.aluno .desenvolve .itens-bloco .txt-itens h3 span {
 }
 
 /* Fontes --------------------------------------------------------------------------------------------- */
+body.fontes header{
+    z-index: 1000;
+}
 
 body.fontes section.desenvolve {
     padding: 0;
@@ -616,6 +619,7 @@ body.fontes .barra-logos .logos-container img {
     height: 80px;
     transition: transform 0.3s;
     object-fit: cover;
+    z-index: 1;
 }
 
 body.fontes .barra-logos .logos-container img:hover {
