@@ -52,7 +52,7 @@ function verificarEAtualizarSenha(senha) {
 
     const mensagem = document.getElementById('mensagem');
     if (score === 4) {
-        mensagem.textContent = "SENHA FORTE!!! PARABÉNS";
+        mensagem.textContent = "Senha Forte!";
     } else {
         if (senha.length < 8) {
             mensagem.textContent = "Tenha no mínimo 8 caracteres.";
